@@ -148,7 +148,7 @@ body{
     border-radius: 10px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
     background: rgb(173,173,173);
-    background: linear-gradient(0deg, rgba(173,173,173,1) 0%, rgba(193,193,193,1) 25%, rgba(207,207,207,1) 50%, rgba(227,227,227,1) 75%, rgba(223,223,223,1) 100%);
+    background: linear-gradient(0deg, rgba(173,173,173,1) 0%, rgba(193,193,193,1) 25%, rgba(213,213,213,1) 50%, rgba(233,233,233,1) 75%, rgba(253,253,253,1) 100%);
     width: 20vw;
     height: 46vh;
     animation: fadeInUp 1s ease-in;
@@ -435,19 +435,20 @@ footer {
         flex-direction: column;
     }
     #twelve-point-star, #twelve-point-star:after, #twelve-point-star:before {
-        width: 50vw;
-        height: 53vh;
+        width: 55vw;
+        height: 48vh;
     }
     .img-bg-container{
-        top: 2%;
-        left: 24%;
+        top: 5%;
+        left: 21.5%;
     }
     .hero-image img {
-        width: 43vw;
-        height: 50vh;
+        width: 260px;
+        height: auto;
+        margin-top: 6%;
     }
     .hero-image {
-        margin-top: 10%;
+        margin-top: 12%;
     }
     .card-1, .card-2, .card-3 {
         width: 45vw;
@@ -459,8 +460,11 @@ footer {
     .about-container {
         margin-top: 135vh;
     }
+    .about-description p {
+        font-size: 14px;
+    }
     .about-image img {
-        height: 40vh;
+        height: 32vh;
         width: 30vw;
     }
     .about::before {
@@ -470,6 +474,9 @@ footer {
     .about::after {
         top: 7vh;
         left: 3vw;
+    }
+    .Products {
+        margin-top: -100px;
     }
     .partnership {
         flex-direction: column;
