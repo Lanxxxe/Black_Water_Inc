@@ -1,0 +1,131 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+.navbar {
+    background-color: #363636;
+    padding: 15px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    animation: fromTop 1.2s ease;
+}
+.nav-brand {
+    color: rgb(240, 240, 240);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+.menu {
+    /* border: 1px solid yellow; */
+    width: 50vw; 
+    margin-left: 15vw;   
+}
+.menu ul {
+    /* border: 1px solid white; */
+    position: inherit;
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu li {
+    /* border: 1px solid green; */
+    list-style: none;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.hidden-checkbox {
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar{
+        height: 60px;
+    }
+    .hamburger {
+        display: flex;
+        position: absolute;
+        right: 20px;
+    }
+    .menu ul li{
+        list-style: none;
+    }
+    
+    .menu ul {
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    .menu{
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: #363636;
+        transition: transform 1s ease-in-out;
+    }
+  
+    .menu.show {
+        display: flex;
+    }
+  
+    .menu li {
+        margin: 10px 0;
+        text-align: center;
+    }
+    .menu ul {
+        position: relative;
+    }
+  
+    #menu-toggle:checked ~ .menu {
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
+  
+    #menu-toggle:checked + .hamburger span:nth-child(1) {
+        transform: rotate(-60deg) translate(-14px, 5px);
+    }
+  
+    #menu-toggle:checked + .hamburger span:nth-child(2) {
+        opacity: 0;
+    }
+  
+    #menu-toggle:checked + .hamburger span:nth-child(3) {
+        transform: rotate(45deg) translate(-12px, -10px);
+    }
+}
+
+@keyframes fromTop {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
