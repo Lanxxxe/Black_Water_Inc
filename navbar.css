@@ -9,7 +9,6 @@ body {
     display: flex;
     justify-content: start;
     align-items: center;
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -27,10 +26,10 @@ body {
 
 .hamburger span {
     display: block;
-    width: 30px;
+    width: 25px;
     height: 3px;
     background-color: #fff;
-    margin: 6px 0;
+    margin: 4px 0;
     transition: 0.4s;
 }
 .menu {
@@ -63,7 +62,7 @@ body {
 
 @media only screen and (max-width: 768px) {
     .navbar{
-        height: 60px;
+        height: 5vh;
     }
     .hamburger {
         display: flex;
@@ -83,11 +82,11 @@ body {
     .menu{
         display: none;
         position: absolute;
-        top: 80px;
+        top: 60px;
         left: 0;
         width: 100%;
         background-color: #363636;
-        transition: transform 1s ease-in-out;
+        transition: fromTop 1s ease-in-out;
     }
   
     .menu.show {
@@ -109,7 +108,7 @@ body {
     }
   
     #menu-toggle:checked + .hamburger span:nth-child(1) {
-        transform: rotate(-60deg) translate(-14px, 5px);
+        transform: rotate(-55deg) translate(-10px, 5px);
     }
   
     #menu-toggle:checked + .hamburger span:nth-child(2) {
@@ -117,7 +116,7 @@ body {
     }
   
     #menu-toggle:checked + .hamburger span:nth-child(3) {
-        transform: rotate(45deg) translate(-12px, -10px);
+        transform: rotate(45deg) translate(-8px, -7px);
     }
 }
 

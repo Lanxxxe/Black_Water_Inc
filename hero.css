@@ -468,15 +468,13 @@ footer {
         width: 30vw;
     }
     .about::before {
-        top: 3vh;
-        left: 8vw;
+        display: none;
     }
     .about::after {
-        top: 7vh;
-        left: 3vw;
+        display: none;
     }
     .Products {
-        margin-top: -100px;
+        margin-top: -150px;
     }
     .partnership {
         flex-direction: column;
